@@ -1,0 +1,64 @@
+
+<div class="panel panel-primary" *ngFor="let employee of empList">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{employee.name}}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="col-xs-10">
+            <div clss="row">
+                <div class="col-xs-4">
+                    <img class=".imageClass" [src]="employee.photopath" />
+                </div>
+                <div class="col-xs-8">
+                    <div clss="row">
+                        <div class="col-xs-6">
+                            name
+                        </div>
+                        <div class="col-xs-6">
+                            :{{employee.name}}
+                        </div>
+                    </div>
+                    <div clss="row">
+                        <div class="col-xs-6">
+                            gender
+
+                        </div>
+                        <div class="col-xs-6">
+                            :{{employee.gender}}
+
+                        </div>
+                    </div>
+                    <div clss="row">
+                        <div class="col-xs-6">
+                            department
+
+                        </div>
+                        <div class="col-xs-6">
+                            :{{employee.department}}
+
+                        </div>
+                    </div>
+                    <div clss="row">
+                        <div class="col-xs-6">
+                            city
+
+                        </div>
+                        <div class="col-xs-6">
+                            :{{employee.city}}
+
+                        </div>
+                    </div>
+                  
+                   
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <a [routerLink]="['/employee/edit/', employee.id]">Edit</a> |
+        <a [routerLink]="" (click)="delete(employee.id)">Delete</a>
+    </div>
+</div>
+
